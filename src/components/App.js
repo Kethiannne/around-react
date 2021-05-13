@@ -7,28 +7,34 @@ import ImagePopup from './ImagePopup';
 
 
 function App() {
-  function handleAvatarOpen (){
+  function handleAvatarOpen() {
     setIsAvatarOpen(true);
   }
-  function handleEditOpen (){
+  function handleEditOpen() {
     setIsEditOpen(true);
   }
-  function handleAddOpen (){
+  function handleAddOpen() {
     setIsAddOpen(true);
   }
-  function handleDeleteClick(){
-    document.querySelector('.popup_delete').classList.add('popup_opened');
+  function handleCardClick(card) {
+    setSelectedCard(card);
   }
+
+  // function handleDeleteClick(){
+  //   document.querySelector('.popup_delete').classList.add('popup_opened');
+  // }
 
   function closeAllPopups(){
     setIsAddOpen(false);
     setIsEditOpen(false);
     setIsAvatarOpen(false);
+    setSelectedCard({});
   }
 
   const [isEditOpen, setIsEditOpen] = React.useState(false);
   const [isAddOpen, setIsAddOpen] = React.useState(false);
   const [isAvaterOpen, setIsAvatarOpen] = React.useState(false);
+  const [selectedCard, setSelectedCard] = React.useState({})
 
 
   return (
@@ -39,6 +45,7 @@ function App() {
         onAvatarClick={handleAvatarOpen}
         onAddClick={handleAddOpen}
         onEditClick={handleEditOpen}
+        onCardClick={handleCardClick}
       >
       </Main>
       <Footer></Footer>
@@ -93,25 +100,12 @@ function App() {
         onClose={closeAllPopups}
       >
         </PopupWithForm>
+
+      <ImagePopup
+        onClose={closeAllPopups}
+        card={selectedCard}
+      ></ImagePopup>
     </div>
-
-    <template className="owner-template">
-      <div className="elements__element">
-        <div className="elements__image">
-          <button className="elements__delete button-hover" aria-label="Delete" type="button">
-          </button>
-        </div>
-        <div className="elements__wrapper">
-          <h2 className="elements__title" />
-          <div className="elements__like-wrapper">
-            <button className="elements__heart button-hover" aria-label="Like" type="button">
-            </button>
-            <span className="elements__like-count">0</span>
-          </div>
-        </div>
-      </div>
-    </template>
-
     </>
   );
 }

@@ -1,12 +1,4 @@
-const api = new Api({
-  baseURL: "https://around.nomoreparties.co/v1/group-7",
-  headers: {
-    authorization: "a5454f22-eab5-4384-8e26-57b127f56551",
-    "Content-Type": "application/json"
-  }
-});
 
-export default api
 
 class Api {
   constructor({baseURL, headers}) {
@@ -105,3 +97,13 @@ class Api {
       })
   }
 }
+
+const api = new Api({
+  baseURL: "https://around.nomoreparties.co/v1/group-7",
+  headers: {
+    authorization: "a5454f22-eab5-4384-8e26-57b127f56551",
+    "Content-Type": "application/json"
+  }
+});
+
+export default api
