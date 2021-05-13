@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import api from '../utils/Api';
+import api from '../utils/api';
 
 export default function Main (props) {
   const [userName, setUserName] = React.useState('Fetching');
@@ -14,14 +14,19 @@ export default function Main (props) {
         setUserName(res.name);
         setUserDescription(res.about);
         setUserAvatar(res.avatar);
-      });
-    }, [])
+      })
+      .catch(err => {
+        console.log((`User info not received properly: ${err}`));
+      })
+  }, [])
 
   React.useEffect(()=>{
     api.getInitialCards()
       .then((res) => {
         setCards(res);
-        return res
+      })
+      .catch(err => {
+        console.log((`Cards could not be delivered as dialed: ${err}`))
       })
   }, [])
 

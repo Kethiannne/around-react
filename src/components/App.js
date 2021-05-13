@@ -7,6 +7,11 @@ import ImagePopup from './ImagePopup';
 
 
 function App() {
+  const [isEditOpen, setIsEditOpen] = React.useState(false);
+  const [isAddOpen, setIsAddOpen] = React.useState(false);
+  const [isAvaterOpen, setIsAvatarOpen] = React.useState(false);
+  const [selectedCard, setSelectedCard] = React.useState({})
+
   function handleAvatarOpen() {
     setIsAvatarOpen(true);
   }
@@ -31,16 +36,10 @@ function App() {
     setSelectedCard({});
   }
 
-  const [isEditOpen, setIsEditOpen] = React.useState(false);
-  const [isAddOpen, setIsAddOpen] = React.useState(false);
-  const [isAvaterOpen, setIsAvatarOpen] = React.useState(false);
-  const [selectedCard, setSelectedCard] = React.useState({})
-
-
   return (
     <>
     <div className="page__wrapper">
-      <Header></Header>
+      <Header/>
       <Main
         onAvatarClick={handleAvatarOpen}
         onAddClick={handleAddOpen}
@@ -48,7 +47,7 @@ function App() {
         onCardClick={handleCardClick}
       >
       </Main>
-      <Footer></Footer>
+      <Footer/>
 
     {/* Edit Form */}
       <PopupWithForm
@@ -98,13 +97,12 @@ function App() {
         title='Are You Sure'
         saveText='Yes'
         onClose={closeAllPopups}
-      >
-        </PopupWithForm>
+      />
 
       <ImagePopup
         onClose={closeAllPopups}
         card={selectedCard}
-      ></ImagePopup>
+      />
     </div>
     </>
   );
