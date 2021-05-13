@@ -1,0 +1,18 @@
+.form__field-error {
+  display: none;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  top: -20px;
+  max-width: 358px;
+  font-size: 14px;
+  font-weight: 400;
+  color: red;
+}
+
+
+@media screen and (max-width: 880px){
+  .form__field-error {
+    max-width: 238px;
+  }
+}

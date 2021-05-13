@@ -1,0 +1,32 @@
+@import url(./__element/elements__element.css);
+@import url(./__image/elements__image.css);
+@import url(./__title/elements__title.css);
+@import url(./__like-wrapper/elements__like-wrapper.css);
+@import url(./__heart/elements__heart.css);
+@import url(./__wrapper/elements__wrapper.css);
+@import url(./__delete/elements__delete.css);
+
+@import url(./__heart/_active/elements__heart_active.css);
+
+.elements {
+  display: grid;
+  max-width: 880px;
+  grid-template-columns: repeat(3, auto);
+  gap: 20px 17px;
+  margin: 50px auto 68px;
+
+}
+
+@media screen and (max-width: 900px) {
+  .elements {
+    grid-template-columns: repeat(2, auto);
+    max-width: 564px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .elements {
+    grid-template-columns: repeat(1, auto);
+    max-width: 282px;
+  }
+}

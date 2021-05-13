@@ -1,0 +1,6 @@
+.elements__wrapper {
+  display: flex;
+  margin: 25px 15px 31px 21px;
+  max-width: 246px;
+  align-items: center;
+}

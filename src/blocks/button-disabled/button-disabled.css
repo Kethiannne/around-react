@@ -1,0 +1,6 @@
+.button-disabled {
+  color: rgba(0, 0, 0, .2);
+  background-color: white;
+  border: rgba(0, 0, 0, .2) solid 1px;
+  border-radius: 2px;
+}

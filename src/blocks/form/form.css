@@ -1,0 +1,27 @@
+@import url(./__title/form__title.css);
+@import url(./__field/form__field.css);
+@import url(./__field-error/form__field-error.css);
+@import url(./__save-button/form__save-button.css);
+
+@import url(./__field/_error/form__field_error.css);
+@import url(./__field-error/_active/form__field-error_active.css);
+@import url(./__save-button/_disabled/form__save-button_disabled.css);
+@import url(./__title/_delete/form__title_delete.css);
+
+.form {
+  width: 430px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  top: -16px;
+}
+
+
+@media screen and (max-width: 880px) {
+  .form {
+    width: 240px;
+  }
+}

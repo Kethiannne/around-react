@@ -1,0 +1,23 @@
+.profile__image-edit{
+  border-radius: 50%;
+  border: none;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.0);
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+.profile__image-edit:active,
+.profile__image-edit:focus,
+.profile__image-edit:focus:active {
+  outline: 0;
+  box-shadow: none;
+}
+.profile__image-edit:hover {
+  background-image: url(../../../images/icons/edit-button.svg);
+  background-color: rgba(0, 0, 0, 0.6);
+  background-size: 26px 26px;
+  background-position: center;
+  background-repeat: no-repeat;
+}

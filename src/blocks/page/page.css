@@ -1,0 +1,11 @@
+@import url(./__wrapper/page__wrapper.css);
+
+.page {
+  min-height: 100vh;
+  background-color: black;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  font-family: inter, arial, sans-serif;
+}
+

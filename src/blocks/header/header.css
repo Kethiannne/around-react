@@ -1,0 +1,8 @@
+@import url(./__logo/header__logo.css);
+
+.header {
+  margin: 0 auto 40px;
+  max-width: inherit;
+  border-bottom: 1px solid rgba(84, 84, 84, .7);
+  padding:45px 0 41px;
+}

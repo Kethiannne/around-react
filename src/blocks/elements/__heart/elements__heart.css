@@ -1,0 +1,16 @@
+.elements__heart {
+  width: 22px;
+  height: 20px;
+  border: none;
+  background-image: url(../../../images/icons/heart-disabled.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+  align-self: center;
+}
+.elements__heart:active,
+.elements__heart:focus,
+.elements__heart:focus:active {
+  outline: 0;
+  box-shadow: none;
+}
