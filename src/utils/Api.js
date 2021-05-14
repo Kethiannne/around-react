@@ -6,7 +6,7 @@ class Api {
     this._headers = headers;
   }
 
-  _getsuccessfulReturn(res){
+  _getSuccessfulReturn(res){
     if (res.ok) {
       return res.json();
     } else {
@@ -19,7 +19,7 @@ class Api {
       headers: this._headers
     })
       .then(res => {
-        return this._getsuccessfulReturn(res);
+        return this._getSuccessfulReturn(res);
       })
   }
 
@@ -30,7 +30,7 @@ class Api {
       body: JSON.stringify({link, name})
     })
       .then(res => {
-        return this._getsuccessfulReturn(res);
+        return this._getSuccessfulReturn(res);
       })
   }
 
@@ -40,7 +40,7 @@ class Api {
       method: "DELETE",
     })
       .then(res => {
-        return this._getsuccessfulReturn(res);
+        return this._getSuccessfulReturn(res);
       })
   }
 
@@ -50,7 +50,7 @@ class Api {
       method: "PUT",
     })
       .then(res => {
-        return this._getsuccessfulReturn(res);
+        return this._getSuccessfulReturn(res);
       })
   }
 
@@ -60,7 +60,7 @@ class Api {
       method: "DELETE",
     })
       .then(res => {
-        return this._getsuccessfulReturn(res);
+        return this._getSuccessfulReturn(res);
       })
   }
 
@@ -69,7 +69,7 @@ class Api {
       headers: this._headers
     })
       .then(res => {
-        return this._getsuccessfulReturn(res);
+        return this._getSuccessfulReturn(res);
       })
   }
 
@@ -81,7 +81,7 @@ class Api {
       body: JSON.stringify(values)
     })
       .then(res => {
-        return this._getsuccessfulReturn(res);
+        return this._getSuccessfulReturn(res);
       })
   }
 
@@ -93,7 +93,7 @@ class Api {
     body: JSON.stringify(link)
     })
       .then(res => {
-        return this._getsuccessfulReturn(res);
+        return this._getSuccessfulReturn(res);
       })
   }
 }
