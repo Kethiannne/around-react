@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import api from '../utils/api';
+import api from '../utils/Api';
 
 export default function Main (props) {
   const [userName, setUserName] = React.useState('Fetching');
