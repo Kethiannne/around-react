@@ -5,6 +5,7 @@
 @import url(./__heart/elements__heart.css);
 @import url(./__wrapper/elements__wrapper.css);
 @import url(./__delete/elements__delete.css);
+@import url(./__delete/_hidden/elements__delete_hidden.css);
 
 @import url(./__heart/_active/elements__heart_active.css);
 
