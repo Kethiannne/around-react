@@ -5,9 +5,9 @@ import Footer from './Footer';
 import ImagePopup from './ImagePopup';
 import api from '../utils/api';
 import CurrentUserContext from '../contexts/CurrentUserContext'
-import EditProfilePopup from './forms/EditProfilePopup';
-import EditAvatarPopup from './forms/EditAvatarPopup';
-import AddPlacePopup from './forms/AddPlacePopup';
+import EditProfilePopup from './EditProfilePopup';
+import EditAvatarPopup from './EditAvatarPopup';
+import AddPlacePopup from './AddPlacePopup';
 import DeleteCardConfirmPopup from './forms/DeleteCardConfirmPopup';
 
 
